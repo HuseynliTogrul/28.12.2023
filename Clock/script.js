@@ -8,6 +8,8 @@ const secondText = document.getElementById("d__second");
 const minuteText = document.getElementById("d__minute");
 const hourText = document.getElementById("d__hour");
 
+const audioEl = document.querySelector(".audio")
+
 
 const clock = () => {
     const time = new Date();
@@ -19,5 +21,13 @@ const clock = () => {
     minutePointer.style.transform = `rotate(${(time.getMinutes() * 6)}deg)`
     secondPointer.style.transform = `rotate(${(time.getSeconds() * 6)}deg)`
 }
+
+const play = () => {
+    const audio = new Audio('sound/tic-tac.mp3');
+    audio.play();
+}
+
+
+setInterval(play, 1000)
 
 setInterval(clock, 1000)
