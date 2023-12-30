@@ -94,7 +94,7 @@ const input = document.getElementById("input");
 
 input.addEventListener("input", () => {
   setTimeout(() => {
-    const givenValue = input.value.trim().tolowerCase();
+    const givenValue = input.value.trim().toLocaleLowerCase();
 
     if (!givenValue) {
       result__box.classList.add("hidden")
@@ -112,7 +112,7 @@ input.addEventListener("input", () => {
 
       liElement.addEventListener("click", () => {
         input.value = result;
-        result__box.classList.remove("hidden");
+        result__box.classList.add("hidden");
       });
 
       result__box.classList.remove("hidden");
